@@ -1,16 +1,18 @@
 from typing import Any
 from django.db import models
+from datetime import datetime
 
 
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=50)
-    category = models.CharField(max_length=50, null = True)
+    sku = models.CharField(max_length=50, null=True)
     description = models.TextField(null = True)
-    picture = models.ImageField(null=True)
-    added = models.DateField(null = True)
-    updated = models.DateField(null = True)
-
-#Category
-#Inventory
-
+    category = models.CharField(max_length=50, null = True)
+    quantity = models.IntegerField(default=0)
+    mrp = models.CharField(max_length=50, default=0)
+    discount = models.CharField(max_length=50, default=0)
+    price = models.CharField(max_length=50, default=0)
+    thumbnail = models.ImageField(null=True, upload_to='images/')
+    added = models.DateField(null = True, default=datetime.now)
+    updated = models.DateField(null = True, default=datetime.now)
