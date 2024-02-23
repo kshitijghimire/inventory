@@ -12,4 +12,3 @@ class sales(models.Model):
     discount = models.IntegerField(default=0)
     grandTotal= models.IntegerField(default=0)
     date = models.DateField(null=True,default=datetime.now)
-

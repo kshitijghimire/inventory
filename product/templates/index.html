@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <p>Todays date is <strong>{{today}}</strong></p>
+    <!-- Complete this for all Alphabets -->
+    {% if ch.lower == 'a' %}
+        <p>This is Vowel</p>
+    {% else %}
+        <p>This is Consonant</p>
+    {% endif %}
+    
+<h2>Products from Product Table</h2>
+    <ul>
+        {% for p in products %}
+
+            <li>{{p}}</li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
