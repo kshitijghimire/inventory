@@ -20,6 +20,10 @@ from .views import home
 from product.views import productHome, ProductDetail
 from purchase.views import PurchaseDetail
 #from product import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 
 urlpatterns = [
     path('', home, name='home'),
@@ -28,4 +32,5 @@ urlpatterns = [
     path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
 
     path('admin/', admin.site.urls),
-]
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
