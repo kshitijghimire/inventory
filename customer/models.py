@@ -12,6 +12,8 @@ class customer(models.Model):
     pan_number = models.IntegerField(default=0)
     created = models.DateField(null=True,default=datetime.now)
     updated = models.DateField(null=True,default=datetime.now)
+    def __str__(self):
+        return self.name
 
 
 

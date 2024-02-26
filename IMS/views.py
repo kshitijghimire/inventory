@@ -6,4 +6,6 @@ def home(request):
         'title':'Inventory Management System'
     }
     return render(request, 'home.html',context)
-   
+
+def main(request):
+    return render(request, 'main.html')

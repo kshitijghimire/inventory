@@ -18,3 +18,6 @@ class Product(models.Model):
     thumbnail = models.ImageField(null=True, upload_to='products/')
     added = models.DateField(null = True, default=datetime.now)
     updated = models.DateField(null = True, default=datetime.now)
+    def __str__(self):
+        return self.name
+    

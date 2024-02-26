@@ -1,16 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from datetime import datetime
+from .models import Product
 
 # Create your views here.
 def productHome(request):
     context = {
         'title':'Products',
-        'today':datetime.now().date(),
-        'ch':'I',
-        'products':['Laptop','Mouse','Keyboard']
-        }
-    
+        'products':Product.objects.all() #TO get all data from product table
+    }
     return render(request,'index.html', context)
 
 def ProductDetail(request):
