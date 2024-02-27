@@ -44,7 +44,7 @@ urlpatterns = [
     path('sales/',saleshome,name='sales'),
     path('customer/',customerhome,name='customer'),
     path('products/detail/', ProductDetail, name='productDetail'),
-    path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
+    path('purchases/', PurchaseDetail, name='purchase'),
     path('admin/', admin.site.urls),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
