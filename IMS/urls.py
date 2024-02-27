@@ -27,6 +27,7 @@ from vendors.views import vendorHome
 from addexpense.views import expenseHome
 from Category.views import  CategoryHome
 from order.views import orderHome
+from sales.views import saleshome
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -39,7 +40,7 @@ urlpatterns = [
     path('expense/', expenseHome, name='expense'),
     path('category/', CategoryHome, name='category'),
     path('order/',orderHome,name='order'),
-
+    path('sales/',saleshome,name='sales'),
     path('products/detail/', ProductDetail, name='productDetail'),
     path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
     path('admin/', admin.site.urls),
