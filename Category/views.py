@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Category
+
 
 # Create your views here.
 def CategoryHome(request):
-    return HttpResponse('I am from Category')
+    return render(request,'categories.html')

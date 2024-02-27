@@ -24,7 +24,9 @@ from product.views import productHome, ProductDetail
 from purchase.views import PurchaseDetail
 from Inventory.views import InventoryHome
 from vendors.views import vendorHome
-
+from addexpense.views import expenseHome
+from Category.views import  CategoryHome
+from order.views import orderHome
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -34,6 +36,10 @@ urlpatterns = [
     path('products/', productHome, name='product'),
     path('inventory/', InventoryHome, name='inventory'),
     path('vendors/', vendorHome, name='vendor'),
+    path('expense/', expenseHome, name='expense'),
+    path('category/', CategoryHome, name='category'),
+    path('order/',orderHome,name='order'),
+
     path('products/detail/', ProductDetail, name='productDetail'),
     path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
     path('admin/', admin.site.urls),
