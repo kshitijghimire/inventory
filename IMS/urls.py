@@ -22,6 +22,8 @@ from .views import sign
 
 from product.views import productHome, ProductDetail
 from purchase.views import PurchaseDetail
+from Inventory.views import InventoryHome
+from vendors.views import vendorHome
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -30,6 +32,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('IMS/', sign, name='sign'),
     path('products/', productHome, name='product'),
+    path('inventory/', InventoryHome, name='inventory'),
+    path('vendors/', vendorHome, name='vendor'),
     path('products/detail/', ProductDetail, name='productDetail'),
     path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
     path('admin/', admin.site.urls),
