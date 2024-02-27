@@ -7,5 +7,6 @@ def home(request):
     }
     return render(request, 'home.html',context)
 
-def main(request):
-    return render(request, 'main.html')
+def sign(request):
+    return render(request, 'sign.html')
+

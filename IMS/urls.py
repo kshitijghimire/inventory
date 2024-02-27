@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home
-from .views import main
+from .views import sign
+
 
 from product.views import productHome, ProductDetail
 from purchase.views import PurchaseDetail
@@ -25,15 +26,12 @@ from purchase.views import PurchaseDetail
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-
 urlpatterns = [
     path('', home, name='home'),
-    path('IMS/', main, name='main'),
+    path('IMS/', sign, name='sign'),
     path('products/', productHome, name='product'),
     path('products/detail/', ProductDetail, name='productDetail'),
     path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
-
     path('admin/', admin.site.urls),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

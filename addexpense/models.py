@@ -10,3 +10,4 @@ class addexpense(models.Model):
     amount = models.PositiveBigIntegerField(default=0)
     date = models.DateField(null = True, default=datetime.now)
    
+   

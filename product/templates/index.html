@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">My Blog</a>
+                <a class="navbar-brand" href="#">Product</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -23,17 +23,32 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{}">AddExpense</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Category</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Sales</a>
+              </li>
+                    
+                        
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'product' %}">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'productDetail' %}">Product Details</a>
+                            <a class="nav-link" href="">Vendor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'main' %}">sign up</a>
+                            <a class="nav-link" href="{% url 'sign' %}">sign up</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:login' %}">Admin Login</a>
