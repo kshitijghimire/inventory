@@ -1,7 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Inventory
+
+
 
 
 # Create your views here.
 def InventoryHome(request):
-    return render(request, 'inventory.html')
+    context ={
+        't':'Inventory management',
+        'Inventory':Inventory.objects.all()
+
+    }
+    return render(request, 'inventory.html',context)
