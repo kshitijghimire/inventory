@@ -7,8 +7,8 @@ def vendorHome(request):
     context = {
         't':'Vendor Management',
         'vendor':vendors.objects.all()
-
-
-
     }
     return render(request, 'vendor.html',context)
+
+
+
