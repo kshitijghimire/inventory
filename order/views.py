@@ -1,7 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import order
+
 
 
 # Create your views here.
 def orderHome(request):
-    return render(request, 'order.html')
+    context = {
+        't':'Order Management',
+        'order':order.objects.all()
+    }
+    return render(request, 'order.html',context)
