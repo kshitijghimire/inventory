@@ -1,7 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import vendors
 
 
 # Create your views here.
 def vendorHome(request):
-    return render(request, 'vendor.html')
+    context = {
+        't':'Vendor Management',
+        'vendor':vendors.objects.all()
+
+
+
+    }
+    return render(request, 'vendor.html',context)
