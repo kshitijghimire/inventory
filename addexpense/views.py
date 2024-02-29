@@ -6,9 +6,6 @@ def expenseHome(request):
     context = {
         't':'expense Management',
         'expense':addexpense.objects.all()
-
-
-
     }
     return render(request,'expense.html',context)
     
