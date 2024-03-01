@@ -4,7 +4,6 @@ from datetime import datetime
 from Category.models import Category
 
 
-
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=50)
@@ -15,7 +14,7 @@ class Product(models.Model):
     mrp = models.CharField(max_length=50, default=0)
     discount = models.CharField(max_length=50, default=0)
     price = models.CharField(max_length=50, default=0)
-    thumbnail = models.ImageField(null=True, upload_to='products/')
+    thumbnail = models.ImageField(null=True, blank=True, upload_to='products/')
     added = models.DateField(null = True, default=datetime.now)
     updated = models.DateField(null = True, default=datetime.now)
     def __str__(self):
