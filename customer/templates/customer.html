@@ -8,6 +8,8 @@
     <div>
         <table class="table">
             <thead>
+
+                <form action="{% url 'customer' %}" method="POST">
                 <tr>
                     <th>Name</th>
                     <th>Address</th>
@@ -22,8 +24,23 @@
             </thead>
 
             <tbody>
+                <tr>
+                    {% if not forms.instance.id %}
+                      {% include 'savecustomer.html' %}
+                    {% endif %}
+                  </tr>
+
+
+
                 {% for a in customer %}
                 <tr>
+                    {% if forms.instance.id == a.id %}
+                    {% include 'savecustomer.html' %}
+                {% else %}
+
+
+
+
                     <td>{{ a.name }}</td>
                     <td>{{ a.address }}</td>
                     <td>{{ a.company_name }}</td>
@@ -40,6 +57,7 @@
                 </tr>
                 {% endfor %}
             </tbody>
+        </form>
 
         </table>
 
