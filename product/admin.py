@@ -9,7 +9,4 @@ class ProductAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(Product, ProductAdmin)
 
-# Admin Django Changes
-admin.site.site_title = 'IMS Title'
-admin.site.site_header = 'Inventory Management System'
-admin.site.index_title = 'Index Title'
+

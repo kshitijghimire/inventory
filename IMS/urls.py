@@ -32,6 +32,11 @@ from customer.views import customerhome
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Admin Django Changes
+admin.site.site_title = 'IMS Title'
+admin.site.site_header = 'Inventory Management System'
+admin.site.index_title = 'Index Title'
+
 urlpatterns = [
     path('', home, name='home'),
     path('IMS/', sign, name='sign'),
