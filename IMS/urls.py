@@ -24,7 +24,6 @@ from product.views import productHome, ProductDetail
 from purchase.views import PurchaseDetail
 from Inventory.views import InventoryHome
 from vendors.views import vendorHome
-from addexpense.views import expenseHome
 
 from expense.views import expenseHome
 
@@ -47,7 +46,6 @@ urlpatterns = [
     path('inventory/', InventoryHome, name='inventory'),
     path('vendors/', vendorHome, name='vendor'),
 
-    path('expense/', expenseHome, name='expense'),
 
     path('expense/', expenseHome, name='expense'),
 
