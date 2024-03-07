@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import addexpense
+from .models import expense
 from .forms import expenseForm
 
 
@@ -12,7 +12,7 @@ def expenseHome(request):
            
             if request.POST.get('save'):
                 pk = request.POST.get('save')
-                item = addexpense.objects.get(id=pk)
+                item = expense.objects.get(id=pk)
                 items = expenseForm(request.POST,instance=item)
             else: 
                 items = expenseForm(request.POST)
@@ -20,19 +20,19 @@ def expenseHome(request):
 
         elif 'delete' in request.POST:
             pk = request.POST.get('delete')
-            item = addexpense.objects.filter(id=pk)
+            item = expense.objects.filter(id=pk)
             item.delete()
 
         elif 'edit' in request.POST:
             pk = request.POST.get('edit')
-            item = addexpense.objects.get(id=pk)
+            item = expense.objects.get(id=pk)
             form = expenseForm(instance=item)   
 
     
     context = {
         'forms': form, 
         't':'expense Management',
-        'expense':addexpense.objects.all()
+        'expense':expense.objects.all()
     }
     return render(request,'expense.html',context)
     

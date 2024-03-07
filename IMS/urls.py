@@ -25,6 +25,9 @@ from purchase.views import PurchaseDetail
 from Inventory.views import InventoryHome
 from vendors.views import vendorHome
 from addexpense.views import expenseHome
+
+from expense.views import expenseHome
+
 from Category.views import  CategoryHome
 from order.views import orderHome
 from sales.views import saleshome
@@ -43,7 +46,11 @@ urlpatterns = [
     path('products/', productHome, name='product'),
     path('inventory/', InventoryHome, name='inventory'),
     path('vendors/', vendorHome, name='vendor'),
+
     path('expense/', expenseHome, name='expense'),
+
+    path('expense/', expenseHome, name='expense'),
+
     path('category/', CategoryHome, name='category'),
     path('order/',orderHome,name='order'),
     path('sales/',saleshome,name='sales'),

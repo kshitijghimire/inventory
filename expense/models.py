@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 # Create your models here.
-class addexpense(models.Model):
+class expense(models.Model):
     categories = models.CharField(max_length=50)
     description = models.CharField(max_length=50)
     amount = models.PositiveBigIntegerField(default=0)
